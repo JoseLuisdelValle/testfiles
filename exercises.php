@@ -1,5 +1,3 @@
-<?php
-header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 
 $exercises = [
@@ -2693,6 +2691,4 @@ $exercises = [
     "Sets": 4,
     "Reps": 10
   }
-];
-
-echo json_encode($exercises, JSON_PRETTY_PRINT);
+]
