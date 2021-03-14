@@ -92,7 +92,6 @@ for (let i = 0; i < exercisesArray.length; i++) {
   console.log(bicepsButton)
   bicepsButton.addEventListener('click', async function(event) {
     console.log("biceps-clic") 
-    let 
     document.querySelector('.muscle-filter').innerHTML = "Biceps"
     event.preventDefault() 
     let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
