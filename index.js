@@ -101,7 +101,8 @@ for (let i = 0; i < exercisesArray.length; i++) {
     let bicepsArray = []
     for (let i = 0; i < exercisesArray.length; i++) {
       let exercise = exercisesArray[i]
-      if (exercise.Muscle_Group == 'Biceps'
+      if (exercise.Muscle_Group == 'Biceps',
+           exercise.equipment == 'GYM'
      
       ) {
         bicepsArray.push(exercise)
