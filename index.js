@@ -68,7 +68,7 @@ window.onclick = function (event) {
 function renderExercises(exercisesArray){  
 for (let i = 0; i < exercisesArray.length; i++) {
   let exercise = exercisesArray[i]
-  document.querySelector('.rides').insertAdjacentHTML('beforeend', `
+  document.querySelector('.exercises').insertAdjacentHTML('beforeend', `
   <tr>
   <td class="px-6 py-4 whitespace-nowrap text-lg text-gray-500">
     ${exercise.Name}
