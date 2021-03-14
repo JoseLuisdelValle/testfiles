@@ -91,6 +91,7 @@ for (let i = 0; i < exercisesArray.length; i++) {
   console.log(bicepsButton)
   bicepsButton.addEventListener('click', async function(event) {
     console.log("biceps-clic") 
+    document.querySelector('.muscle-filter').innerHTML = "Biceps"
     event.preventDefault() 
     let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
     console.log(response)
@@ -110,6 +111,7 @@ for (let i = 0; i < exercisesArray.length; i++) {
   console.log(abdominalsButton)
   abdominalsButton.addEventListener('click', async function(event) {
     console.log("abdominals-clic") 
+    document.querySelector('.muscle-filter').innerHTML = "Abdominals"
     event.preventDefault() 
     let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
     console.log(response)
@@ -131,7 +133,8 @@ for (let i = 0; i < exercisesArray.length; i++) {
 let backButton = document.querySelector('#back-filter')
 console.log(backButton)
 backButton.addEventListener('click', async function(event) {
-  console.log("back-clic") 
+  console.log("back-clic")
+  document.querySelector('.muscle-filter').innerHTML = "Back" 
   event.preventDefault() 
   let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
   console.log(response)
@@ -151,6 +154,7 @@ backButton.addEventListener('click', async function(event) {
   console.log(calvesButton)
   calvesButton.addEventListener('click', async function(event) {
     console.log("calves-clic") 
+    document.querySelector('.muscle-filter').innerHTML = "Calves"
     event.preventDefault() 
     let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
     console.log(response)
@@ -171,6 +175,7 @@ backButton.addEventListener('click', async function(event) {
   console.log(chestButton)
   chestButton.addEventListener('click', async function(event) {
     console.log("chest-clic") 
+    document.querySelector('.muscle-filter').innerHTML = "Chest"
     event.preventDefault() 
     let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
     console.log(response)
@@ -191,6 +196,7 @@ let legsButton = document.querySelector('#legs-filter')
 console.log(legsButton)
 legsButton.addEventListener('click', async function(event) {
   console.log("legs-clic") 
+  document.querySelector('.muscle-filter').innerHTML = "Legs"
   event.preventDefault() 
   let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
   console.log(response)
@@ -210,6 +216,7 @@ let ShouldersButton = document.querySelector('#Shoulders-filter')
 console.log(ShouldersButton)
 ShouldersButton.addEventListener('click', async function(event) {
   console.log("Shoulders-clic") 
+  document.querySelector('.muscle-filter').innerHTML = "Shoulders"
   event.preventDefault() 
   let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
   console.log(response)
@@ -230,6 +237,7 @@ let TricepsButton = document.querySelector('#Triceps-filter')
 console.log(TricepsButton)
 TricepsButton.addEventListener('click', async function(event) {
   console.log("Triceps-clic") 
+  document.querySelector('.muscle-filter').innerHTML = "Triceps"
   event.preventDefault() 
   let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
   console.log(response)
@@ -245,5 +253,140 @@ TricepsButton.addEventListener('click', async function(event) {
   renderExercises(TricepsArray)
 })
 
+let freeButton = document.querySelector('#free-filter')
+console.log(freeButton)
+freeButton.addEventListener('click', async function(event) {
+  console.log("free-clic") 
+  document.querySelector('.equipment-filter').innerHTML = "Free Weights"
+  event.preventDefault() 
+  let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
+  console.log(response)
+  let json = await response.json()
+  let exercisesArray = json
+  let freeArray = []
+  for (let i = 0; i < exercisesArray.length; i++) {
+    let exercise = exercisesArray[i]
+    if (exercise.equipment == 'Free Weights') {
+      freeArray.push(exercise)
+    } }
+  document.querySelector('.exercises').innerHTML = ""
+  renderExercises(freeArray)
+})
 
+let gymButton = document.querySelector('#gym-filter')
+console.log(gymButton)
+gymButton.addEventListener('click', async function(event) {
+  console.log("gym-clic") 
+  document.querySelector('.equipment-filter').innerHTML = "GYM"
+  event.preventDefault() 
+  let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
+  console.log(response)
+  let json = await response.json()
+  let exercisesArray = json
+  let gymArray = []
+  for (let i = 0; i < exercisesArray.length; i++) {
+    let exercise = exercisesArray[i]
+    if (exercise.equipment == 'GYM') {
+      gymArray.push(exercise)
+    } }
+  document.querySelector('.exercises').innerHTML = ""
+  renderExercises(gymArray)
+})
 
+let multiButton = document.querySelector('#multi-filter')
+console.log(multiButton)
+multiButton.addEventListener('click', async function(event) {
+  console.log("multi-clic") 
+  document.querySelector('.movement-filter').innerHTML = "Multi-Joint Exercise"
+  event.preventDefault() 
+  let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
+  console.log(response)
+  let json = await response.json()
+  let exercisesArray = json
+  let multiArray = []
+  for (let i = 0; i < exercisesArray.length; i++) {
+    let exercise = exercisesArray[i]
+    if (exercise.Joint == 'Multi-Joint Exercise') {
+      multiArray.push(exercise)
+    } }
+  document.querySelector('.exercises').innerHTML = ""
+  renderExercises(multiArray)
+})
+
+let singleButton = document.querySelector('#single-filter')
+console.log(singleButton)
+singleButton.addEventListener('click', async function(event) {
+  console.log("single-clic") 
+  document.querySelector('.movement-filter').innerHTML = "Single-Joint Exercise"
+  event.preventDefault() 
+  let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
+  console.log(response)
+  let json = await response.json()
+  let exercisesArray = json
+  let singleArray = []
+  for (let i = 0; i < exercisesArray.length; i++) {
+    let exercise = exercisesArray[i]
+    if (exercise.Joint == 'Single-Joint Exercise') {
+      singleArray.push(exercise)
+    } }
+  document.querySelector('.exercises').innerHTML = ""
+  renderExercises(singleArray)
+})
+let beginnerButton = document.querySelector('#beginner-filter')
+console.log(beginnerButton)
+beginnerButton.addEventListener('click', async function(event) {
+  console.log("beginner-clic") 
+  document.querySelector('.level-filter').innerHTML = "Beginner"
+  event.preventDefault() 
+  let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
+  console.log(response)
+  let json = await response.json()
+  let exercisesArray = json
+  let beginnerArray = []
+  for (let i = 0; i < exercisesArray.length; i++) {
+    let exercise = exercisesArray[i]
+    if (exercise.Level == 'Beginner') {
+      beginnerArray.push(exercise)
+    } }
+  document.querySelector('.exercises').innerHTML = ""
+  renderExercises(beginnerArray)
+})
+let intermediateButton = document.querySelector('#intermediate-filter')
+console.log(intermediateButton)
+intermediateButton.addEventListener('click', async function(event) {
+  console.log("intermediate-clic") 
+  document.querySelector('.level-filter').innerHTML = "Intermediate"
+  event.preventDefault() 
+  let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
+  console.log(response)
+  let json = await response.json()
+  let exercisesArray = json
+  let intermediateArray = []
+  for (let i = 0; i < exercisesArray.length; i++) {
+    let exercise = exercisesArray[i]
+    if (exercise.Level == 'Intermediate') {
+      intermediateArray.push(exercise)
+    } }
+  document.querySelector('.exercises').innerHTML = ""
+  renderExercises(intermediateArray)
+})
+
+let advancedButton = document.querySelector('#advanced-filter')
+console.log(advancedButton)
+advancedButton.addEventListener('click', async function(event) {
+  console.log("advanced-clic") 
+  document.querySelector('.level-filter').innerHTML = "Advanced"
+  event.preventDefault() 
+  let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
+  console.log(response)
+  let json = await response.json()
+  let exercisesArray = json
+  let advancedArray = []
+  for (let i = 0; i < exercisesArray.length; i++) {
+    let exercise = exercisesArray[i]
+    if (exercise.Level == 'Advanced') {
+      advancedArray.push(exercise)
+    } }
+  document.querySelector('.exercises').innerHTML = ""
+  renderExercises(advancedArray)
+})
