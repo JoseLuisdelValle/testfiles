@@ -66,8 +66,22 @@
 <body>
   <div>
     <h1 style="display: inline-block;">My Fitness Database</h1>
-    <a style="float: right;" href="#" id="noober-pool-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">My Workout</a>
+    <a style="float: right;" href="#" id="noober-pool--filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">My Workout</a>
     <a style="float: right;" href="#" id="noober-pool-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">Fitness Database</a>
+
+  </div>
+  <div>
+    <h1 style="display: inline-block;">Primary Muscle Trained</h1>
+    <a href="#" id="abdominals-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">Abdominals</a>
+    <a href="#" id="biceps-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">Biceps</a>
+    <a href="#" id="back-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">Back</a>
+    <a href="#" id="calves-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">Calves</a>
+    <a href="#" id="chest-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">Chest</a>
+    <a href="#" id="legs-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">Legs</a>
+    <a href="#" id="Shoulders-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">Shoulders</a>
+    <a href="#" id="Triceps-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">Triceps</a>
+    
+
   </div>
   <br><br>
   <div class="sign-in-or-sign-out"></div>
@@ -101,7 +115,7 @@
     <div class="dropdown">
       <button onclick="muscleFunction()" class="dropbtn">Primary Muscle Trained: </button>
       <div id="muscleDropdown" class="dropdown-content">
-        <a href="#" id="all-filter" class="filter-button" >Biceps</a>
+        <a href="#">Biceps</a>
         <a href="#">Abdominals</a>
         <a href="#">Triceps</a>
         <a href="#">Shoulders</a>
@@ -133,6 +147,7 @@
       </div>
     </div>
   </div>
+
   <div class="flex flex-col">
     <div class="my-6 overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -155,7 +170,9 @@
               </tr>
             </thead>
 
-            <tbody class="exercises bg-white divide-y divide-gray-200"> -->
+  
+
+            <tbody class="exercises bg-white divide-y divide-gray-200">
               <!-- <tr>
                 <td class="px-6 py-4 whitespace-nowrap text-lg text-gray-500">
                   Admin
@@ -173,7 +190,7 @@
                   <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                 </td>
               </tr> -->
-            </tbody> -->
+            </tbody>
           </table>
         </div>
       </div>
