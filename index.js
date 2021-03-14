@@ -102,7 +102,7 @@ for (let i = 0; i < exercisesArray.length; i++) {
       if (exercise.Muscle_Group == 'Biceps') {
         bicepsArray.push(exercise)
       } }
-    document.querySelector('.rides').innerHTML = ""
+    document.querySelector('.exercises').innerHTML = "hi"
     renderExercises(bicepsArray)
   })
 
