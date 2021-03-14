@@ -1,6 +1,7 @@
+header('Content-Type: application/json');
 header("Access-Control-Allow-Origin: *");
 
-$exercises = [
+[
   {
     "Muscle_Group": "Abdominals",
     "Muscles_Trained": "Lower Abdominals",
