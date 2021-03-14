@@ -88,10 +88,12 @@ for (let i = 0; i < exercisesArray.length; i++) {
 </tr>`)
 }}
 
+  let Muscle_Group = "Triceps"
   let bicepsButton = document.querySelector('#biceps-filter')
   console.log(bicepsButton)
   bicepsButton.addEventListener('click', async function(event) {
     console.log("biceps-clic") 
+
     document.querySelector('.muscle-filter').innerHTML = "Biceps"
     event.preventDefault() 
     let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
@@ -101,7 +103,7 @@ for (let i = 0; i < exercisesArray.length; i++) {
     let bicepsArray = []
     for (let i = 0; i < exercisesArray.length; i++) {
       let exercise = exercisesArray[i]
-       if (exercise.Muscle_Group = "Biceps"
+      if (exercise.Muscle_Group == Muscle_Group
       ) {
         bicepsArray.push(exercise)
       } }
@@ -392,3 +394,12 @@ advancedButton.addEventListener('click', async function(event) {
   document.querySelector('.exercises').innerHTML = ""
   renderExercises(advancedArray)
 })
+
+
+
+
+
+
+
+
+
