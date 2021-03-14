@@ -87,7 +87,7 @@ for (let i = 0; i < exercisesArray.length; i++) {
   </td>
 </tr>`)
 }}
-  let bicepsButton = document.querySelector('#noober-pool-filter')
+  let bicepsButton = document.querySelector('#biceps-filter')
   console.log(bicepsButton)
   bicepsButton.addEventListener('click', async function(event) {
     console.log("biceps-clic") 
@@ -102,7 +102,148 @@ for (let i = 0; i < exercisesArray.length; i++) {
       if (exercise.Muscle_Group == 'Biceps') {
         bicepsArray.push(exercise)
       } }
-    document.querySelector('.exercises').innerHTML = "hi"
+    document.querySelector('.exercises').innerHTML = ""
     renderExercises(bicepsArray)
   })
+
+  let abdominalsButton = document.querySelector('#abdominals-filter')
+  console.log(abdominalsButton)
+  abdominalsButton.addEventListener('click', async function(event) {
+    console.log("abdominals-clic") 
+    event.preventDefault() 
+    let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
+    console.log(response)
+    let json = await response.json()
+    let exercisesArray = json
+    let abdominalsArray = []
+    for (let i = 0; i < exercisesArray.length; i++) {
+      let exercise = exercisesArray[i]
+      if (exercise.Muscle_Group == 'Abdominals') {
+        abdominalsArray.push(exercise)
+      } }
+    document.querySelector('.exercises').innerHTML = ""
+    renderExercises(abdominalsArray)
+})
+
+
+
+  
+let backButton = document.querySelector('#back-filter')
+console.log(backButton)
+backButton.addEventListener('click', async function(event) {
+  console.log("back-clic") 
+  event.preventDefault() 
+  let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
+  console.log(response)
+  let json = await response.json()
+  let exercisesArray = json
+  let backArray = []
+  for (let i = 0; i < exercisesArray.length; i++) {
+    let exercise = exercisesArray[i]
+    if (exercise.Muscle_Group == 'Back') {
+      backArray.push(exercise)
+    } }
+  document.querySelector('.exercises').innerHTML = ""
+  renderExercises(backArray)
+  })
+  
+  let calvesButton = document.querySelector('#calves-filter')
+  console.log(calvesButton)
+  calvesButton.addEventListener('click', async function(event) {
+    console.log("calves-clic") 
+    event.preventDefault() 
+    let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
+    console.log(response)
+    let json = await response.json()
+    let exercisesArray = json
+    let calvesArray = []
+    for (let i = 0; i < exercisesArray.length; i++) {
+      let exercise = exercisesArray[i]
+      if (exercise.Muscle_Group == 'Calves') {
+        calvesArray.push(exercise)
+      } }
+    document.querySelector('.exercises').innerHTML = ""
+    renderExercises(calvesArray)
+  })
+
+  
+  let chestButton = document.querySelector('#chest-filter')
+  console.log(chestButton)
+  chestButton.addEventListener('click', async function(event) {
+    console.log("chest-clic") 
+    event.preventDefault() 
+    let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
+    console.log(response)
+    let json = await response.json()
+    let exercisesArray = json
+    let chestArray = []
+    for (let i = 0; i < exercisesArray.length; i++) {
+      let exercise = exercisesArray[i]
+      if (exercise.Muscle_Group == 'Chest') {
+        chestArray.push(exercise)
+      } }
+    document.querySelector('.exercises').innerHTML = ""
+    renderExercises(chestArray)
+})
+
+
+let legsButton = document.querySelector('#legs-filter')
+console.log(legsButton)
+legsButton.addEventListener('click', async function(event) {
+  console.log("legs-clic") 
+  event.preventDefault() 
+  let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
+  console.log(response)
+  let json = await response.json()
+  let exercisesArray = json
+  let legsArray = []
+  for (let i = 0; i < exercisesArray.length; i++) {
+    let exercise = exercisesArray[i]
+    if (exercise.Muscle_Group == 'Legs') {
+      legsArray.push(exercise)
+    } }
+  document.querySelector('.exercises').innerHTML = ""
+  renderExercises(legsArray)
+})
+
+let ShouldersButton = document.querySelector('#Shoulders-filter')
+console.log(ShouldersButton)
+ShouldersButton.addEventListener('click', async function(event) {
+  console.log("Shoulders-clic") 
+  event.preventDefault() 
+  let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
+  console.log(response)
+  let json = await response.json()
+  let exercisesArray = json
+  let ShouldersArray = []
+  for (let i = 0; i < exercisesArray.length; i++) {
+    let exercise = exercisesArray[i]
+    if (exercise.Muscle_Group == 'Shoulders') {
+      ShouldersArray.push(exercise)
+    } }
+  document.querySelector('.exercises').innerHTML = ""
+  renderExercises(ShouldersArray)
+})
+
+
+let TricepsButton = document.querySelector('#Triceps-filter')
+console.log(TricepsButton)
+TricepsButton.addEventListener('click', async function(event) {
+  console.log("Triceps-clic") 
+  event.preventDefault() 
+  let response = await fetch("https://gifted-visvesvaraya-d969f0.netlify.app/exercises.json")
+  console.log(response)
+  let json = await response.json()
+  let exercisesArray = json
+  let TricepsArray = []
+  for (let i = 0; i < exercisesArray.length; i++) {
+    let exercise = exercisesArray[i]
+    if (exercise.Muscle_Group == 'Triceps') {
+      TricepsArray.push(exercise)
+    } }
+  document.querySelector('.exercises').innerHTML = ""
+  renderExercises(TricepsArray)
+})
+
+
 
