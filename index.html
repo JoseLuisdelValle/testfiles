@@ -70,8 +70,7 @@
     <a style="float: right;" href="#" id="noober-pool-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">Fitness Database</a>
 
   </div>
-  <div>
-    <h1 style="display: inline-block;">Primary Muscle Trained</h1>
+<!--   
     <a href="#" id="abdominals-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">Abdominals</a>
     <a href="#" id="biceps-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">Biceps</a>
     <a href="#" id="back-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">Back</a>
@@ -81,9 +80,54 @@
     <a href="#" id="Shoulders-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">Shoulders</a>
     <a href="#" id="Triceps-filter" class="filter-button inline-block text-blue-500 rounded px-4 py-2">Triceps</a>
     
+  </div> -->
 
-  </div>
+  <div>
+    <h1 style="display: inline-block;">Filters</h1>
+    <div class="dropdown">
+      <button onclick="muscleFunction()" class="dropbtn">Primary Muscle Trained: </button>
+      <div id="muscleDropdown" class="dropdown-content">
+        <a href="#" id="biceps-filter" >Biceps</a>
+        <a href="#" id="abdominals-filter">Abdominals</a>
+        <a href="#" id="Triceps-filter" >Triceps</a>
+        <a href="#" id="Shoulders-filter"  >Shoulders</a>
+        <a href="#"  id="back-filter" >Back</a>
+        <a href="#" id="legs-filter" >Legs</a>
+        <a href="#" id="chest-filter" >Chest</a>
+        <a href="#" id="calves-filter" >Calves</a>
+      </div>
+      <div class="dropdown">
+        <button onclick="equipmentFunction()" class="dropbtn">Type of Equipment:</button>
+        <div id="equipmentDropdown" class="dropdown-content">
+          <a href="#" id="free-filter" >Free weights</a>
+          <a href="#" id="gym-filter" >Gym</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button onclick="movementFunction()" class="dropbtn">Type of Movement:</button>
+        <div id="movementDropdown" class="dropdown-content">
+          <a href="#" id="multi-filter" >Multi-Joint</a>
+          <a href="#" id="single-filter" >Single-Joint</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button onclick="levelFunction()" class="dropbtn">Level:</button>
+        <div id="levelDropdown" class="dropdown-content">
+          <a href="#" id="beginner-filter" >Beginner</a>
+          <a href="#" id="intermediate-filter" >Intermediate</a>
+          <a href="#" id="advanced-filter">Advanced</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h1 >Filters added:</h1>
+      <a href="#" class="muscle-filter px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"></a>
+      <a href="#" class="equipment-filter px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"></a>
+      <a href="#" class="movement-filter px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500" ></a>
+      <a href="#" class="level-filter px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500" ></a>
+    </div>
   <br><br>
+
   <div class="sign-in-or-sign-out"></div>
  
   <!-- Put the Firebase config here -->
@@ -107,45 +151,14 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   </script>
-  <script src="index.js"></script>
-<br><br>
+  <!-- <script src="index.js"></script> -->
+<!-- <br><br> -->
+ 
+    <script src="index.js"></script>
+ 
+  <!-- </div> -->
+  <!-- <div> -->
 
-  <div class="filters md:flex justify-center space-x-2 md:space-y-0 space-y-2">
-    <div class="text-center text-xl text-blue-500 px-4 md:py-2" style="color:#000000;">Filters:</div>
-    <div class="dropdown">
-      <button onclick="muscleFunction()" class="dropbtn">Primary Muscle Trained: </button>
-      <div id="muscleDropdown" class="dropdown-content">
-        <a href="#">Biceps</a>
-        <a href="#">Abdominals</a>
-        <a href="#">Triceps</a>
-        <a href="#">Shoulders</a>
-        <a href="#">Back</a>
-        <a href="#">Legs</a>
-        <a href="#">Chest</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button onclick="equipmentFunction()" class="dropbtn">Type of Equipment:</button>
-      <div id="equipmentDropdown" class="dropdown-content">
-        <a href="#">Free weights</a>
-        <a href="#">Gym</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button onclick="movementFunction()" class="dropbtn">Type of Movement:</button>
-      <div id="movementDropdown" class="dropdown-content">
-        <a href="#">Multi-Joint</a>
-        <a href="#">Single-Joint</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button onclick="levelFunction()" class="dropbtn">Level:</button>
-      <div id="levelDropdown" class="dropdown-content">
-        <a href="#">Beginner</a>
-        <a href="#">Intermediate</a>
-        <a href="#">Advanced</a>
-      </div>
-    </div>
   </div>
 
   <div class="flex flex-col">
@@ -169,8 +182,6 @@
                 </th>
               </tr>
             </thead>
-
-  
 
             <tbody class="exercises bg-white divide-y divide-gray-200">
               <!-- <tr>
