@@ -102,7 +102,7 @@ for (let i = 0; i < exercisesArray.length; i++) {
     for (let i = 0; i < exercisesArray.length; i++) {
       let exercise = exercisesArray[i]
        if (exercise.Muscle_Group == document.querySelector('.muscle-filter').innerHTML, 
-           exercise.equipment == 'GYM'
+         exercise.equipment == document.querySelector('.equipment-filter').innerHTML
      
       ) {
         bicepsArray.push(exercise)
